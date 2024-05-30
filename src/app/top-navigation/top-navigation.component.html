@@ -1,0 +1,27 @@
+<!-- top tav -->
+<ng-topnav
+  *ngIf="!userDetailsLoad"
+  [userDetails]="userListItems"
+  [tenants]="tenants"
+  [roles]="roles"
+  [defaultSelections]="defaultSelections"
+  (onChangeTenant)="onChangeTenant($event)"
+  (onChangeRole)="onChangeRole($event)"
+  (onClickLogout)="logout()"
+></ng-topnav>
+<!-- breadcrumbs  -->
+<ng-breadcrumbs
+  *ngIf="!breadcrumbLoad"
+  (onClickBreadcrumbItem)="onClickBreadcrumbItem($event)"
+  [breadcrumbs]="breadcrumbItems"
+></ng-breadcrumbs>
+<!-- product / table selection  -->
+<ng-product-toolbar
+  *ngIf="!dataLoad && !breadcrumbLoad"
+  [products]="productItems"
+  [tables]="tableItems"
+  [selectedItems]="selectedItems"
+  [dropdownName]="dropdownName"
+  (onSelectProduct)="onSelectProduct($event)"
+  (onSelectTable)="onSelectTable($event)"
+></ng-product-toolbar>

@@ -1,1 +1,459 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/index.scss";
+@import "primeicons/primeicons.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    background: transparent;
+    scrollbar-width: thin;
+}
+
+body {
+    font-family: $--pds-tkn-font-role-ui !important;
+    background-color: $--pds-tkn-color-neutral-200 !important;
+}
+
+:-moz-any {
+    ::-webkit-scrollbar {
+        width: 1px;
+        height: 1px;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    scrollbar-width: thin;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    scrollbar-width: thin;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a7a7a7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #868686;
+}
+
+.p-skeleton {
+    color: rgb(194, 194, 194) !important;
+}
+
+.p-card {
+    // margin-top: 20px; // To be removed
+    // margin-left: 10px;
+    margin: 2%;
+}
+
+.p-tabview-panels {
+    background-color: $--pds-tkn-color-neutral-200 !important;
+}
+
+/*
+Ag-Grid theme styles
+*/
+.ag-theme-acmecorp {
+    --ag-odd-row-background-color: #e6e6e691;
+    --ag-row-hover-color: #e2d9fe;
+    --ag-alpine-active-color: #5828ba;
+    --ag-selected-row-background-color: #d0c1fc;
+    --ag-input-focus-border-color: #5828ba;
+}
+
+// .ag-theme-alpine .ag-header {
+//   font-family: $--pds-tkn-font-family-ibm-plex-sans;
+// }
+.ag-theme-alpine .ag-header-cell {
+    font-size: $--pds-tkn-font-size-400;
+    background-color: rgb(255, 255, 255);
+}
+
+.ag-body-viewport-wrapper.ag-layout-normal {
+    overflow-x: scroll;
+}
+
+.p-sidebar-right {
+    @media only screen and (max-width: 1333px) {
+        width: 72vw !important;
+    }
+
+    background-color: $--pds-tkn-color-neutral-200 !important;
+    width: 50vw !important;
+    z-index: 100;
+}
+
+// .p-sidebar-right .p-sidebar-header {
+//   padding: 0 !important;
+//   overflow-y: hidden;
+// }
+
+// .p-sidebar-left {
+//   //   z-index: -1 !important;
+//   background-color: $--pds-tkn-color-purple-800 !important;
+//   color: $--pds-tkn-color-white !important;
+//   margin-left: 78px !important;
+
+//   h6 {
+//     padding-left: $--pds-tkn-font-size-100;
+//     // margin-top: -5px;
+//   }
+// }
+
+// .p-sidebar-content {
+//   padding: $--pds-tkn-space-none !important;
+//   width: 100% !important;
+//   overflow-x: hidden !important;
+//   // overflow-y: scroll !important;
+// }
+
+// .p-panelmenu {
+//   margin-top: 15px !important;
+//   width: 100% !important;
+//   border-radius: $--pds-tkn-space-none !important;
+// }
+
+// .p-panelmenu .p-panelmenu-header>a {
+//   padding: 15px !important;
+//   border-radius: 0px !important;
+// }
+
+// .p-dialog-header {
+//   height: 20px !important;
+//   padding: 2rem !important;
+//   border-bottom: 1px solid !important;
+//   color: $--pds-tkn-color-neutral-300 !important;
+// }
+
+// .p-dialog-footer {
+//   height: auto !important;
+//   padding: 15px !important;
+//   border-top: 1px solid !important;
+//   color: $--pds-tkn-color-neutral-300 !important;
+// }
+
+// .p-dialog-content {
+//   padding: 10px !important;
+// }
+
+.p-menuitem:hover {
+    background-color: $--pds-tkn-color-purple-500;
+}
+
+// .p-panelmenu-content,
+// .p-panelmenu-header-link {
+//   background: $--pds-tkn-color-purple-800 !important;
+//   border: $--pds-tkn-space-none !important;
+//   border-radius: 0px !important;
+//   color: $--pds-tkn-color-white !important;
+//   overflow: hidden !important;
+// }
+
+// .p-panelmenu .p-panelmenu-header>a:focus {
+//   box-shadow: none !important;
+// }
+
+// .p-menuitem-text {
+//   color: $--pds-tkn-color-white !important;
+// }
+
+// .p-menuitem-link:hover {
+//   background-color: $--pds-tkn-color-purple-600 !important;
+// }
+
+// .p-panelmenu .p-menuitem-link {
+//   flex-wrap: wrap !important;
+//   //   justify-content: center !important;
+//   padding-left: 40px !important;
+// }
+
+// .p-panelmenu .p-menuitem-text>a:focus {
+//   box-shadow: none !important;
+// }
+
+// .p-component-overlay,
+// .p-sidebar-mask,
+// .p-component-overlay-enter {
+//   z-index: $--pds-tkn-space-none !important;
+// }
+
+.p-listbox {
+    margin-top: 5px !important;
+    width: 100% !important;
+    background: $--pds-tkn-color-purple-800 !important;
+    border: none !important;
+    border-radius: none;
+
+    .p-listbox-item {
+        padding-left: 40px !important;
+        color: $--pds-tkn-color-white !important;
+
+        // text-align: center !important;
+    }
+
+    .p-listbox-item:hover {
+        background: $--pds-tkn-color-purple-600 !important;
+    }
+
+    .p-listbox-item:active {
+        background: $--pds-tkn-color-purple-600 !important;
+    }
+
+    .p-highlight {
+        background: $--pds-tkn-color-purple-600 !important;
+    }
+}
+
+// .p-tabview .p-tabview-nav {
+//   border: none !important;
+// }
+.p-tabmenu .p-tabmenu-nav li.p-highlight .p-menuitem-link {
+    color: $--pds-tkn-color-purple-500 !important;
+}
+
+// .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+//   color: $--pds-tkn-color-purple-500;
+// }
+// .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):active {
+//   color: $--pds-tkn-color-purple-500;
+// }
+// .p-tabview .p-tabview-nav li .p-tabview-nav-link:hover {
+//   color: $--pds-tkn-color-purple-300 !important;
+// }
+// .p-tabmenu .p-tabmenu-nav li .p-menuitem-link:not(.p-disabled):focus {
+//   color: red !important;
+// }
+.p-menuitem-link:hover {
+    color: $--pds-tkn-color-purple-500 !important;
+    background-color: transparent !important;
+}
+
+.p-menuitem-link {
+    color: $--pds-tkn-color-neutral-700 !important;
+}
+
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+    border-color: $--pds-tkn-color-purple-500 !important;
+    color: $--pds-tkn-color-purple-500 !important;
+}
+
+.p-dropdown,
+.p-inputtext,
+.p-calendar,
+.p-multiselect {
+    width: 90%;
+    height: 36px;
+    padding: -10px;
+    border-color: $--pds-tkn-color-neutral-600 !important;
+    border-radius: 4px !important;
+}
+
+.p-dropdown .p-dropdown-label {
+    margin-top: -7px !important;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+    border-color: $--pds-tkn-color-purple-500 !important;
+    box-shadow: 0 0 0 0.02rem $--pds-tkn-color-purple-200 !important;
+}
+
+.p-dropdown:not(.p-disabled):hover {
+    border-color: $--pds-tkn-color-purple-500 !important;
+    box-shadow: 0 0 0 0.02rem $--pds-tkn-color-purple-200 !important;
+}
+
+
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: $--pds-tkn-color-purple-900 !important;
+    background-color: $--pds-tkn-color-purple-100 !important;
+    // margin: 5px;
+    // border-radius: 4px;
+}
+
+
+
+// .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+    background-color: $--pds-tkn-color-purple-50 !important;
+
+}
+
+.input-label {
+    color: #000000;
+    font-size: 14px;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+input:enabled:focus,
+textarea:enabled:focus {
+    border-color: $--pds-tkn-color-purple-500 !important;
+    box-shadow: 0 0 0 0.02rem $--pds-tkn-color-purple-200 !important;
+}
+
+input:hover,
+textarea:hover {
+    border-color: $--pds-tkn-color-purple-500 !important;
+    box-shadow: 0 0 0 0.02rem $--pds-tkn-color-purple-200 !important;
+}
+
+.validation-warning-msg {
+    color: #f40000;
+    margin-top: 0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.validation-warning-pointer {
+    color: #f40000;
+}
+
+.input-warning {
+    .p-dropdown {
+        box-shadow: 0 0 0 0.05em #f40000 !important;
+        border: 1px solid #d40000 !important;
+        border-radius: 4px;
+    }
+
+    input {
+        box-shadow: 0 0 0 0.05em #f40000 !important;
+        border: 1px solid #d40000 !important;
+        border-radius: 4px;
+    }
+}
+
+.p-progress-spinner {
+    height: 1.5rem !important;
+}
+
+.p-progress-spinner-circle {
+    stroke: $--pds-tkn-color-purple-700 !important;
+}
+
+.onModal-open {
+    position: fixed;
+    overflow: hidden;
+}
+
+.files-list {
+    width: 90%;
+    // margin-bottom: 10px;
+    // margin-left: 5%;
+    text-align: center;
+    padding: 16px 24px;
+
+    .file-info {
+        width: 90%;
+
+        .file-name {
+            color: var(--pds-tkn-color-neutral-800, #252525);
+            text-align: justify;
+            text-overflow: ellipsis;
+            font-family: IBM Plex Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            /* 125% */
+            word-break: break-word;
+        }
+
+        .file-size {
+            font-weight: 300;
+            margin-left: 20px;
+        }
+    }
+}
+
+.p-selectbutton .p-button.p-highlight {
+    background-color: $--pds-tkn-color-purple-400 !important;
+    border-color: $--pds-tkn-color-purple-600 !important;
+    color: $--pds-tkn-color-white !important;
+}
+
+.p-selectbutton .p-button {
+    // border-color: $--pds-tkn-color-purple-400 !important;
+    border: 2px solid $--pds-tkn-color-purple-300 !important;
+    width: fit-content !important;
+    height: 25px !important;
+    // height: 40px !important;
+    color: $--pds-tkn-color-purple-400 !important;
+}
+
+.p-button-label {
+    // color: $--pds-tkn-color-purple-400 !important;
+    font-size: 15px !important;
+    font-weight: $--pds-tkn-font-weight-500 !important;
+    line-height: $--pds-tkn-size-5x !important;
+}
+
+.table-skeleton {
+    padding: 50px;
+    padding-left: 50px;
+}
+
+// definition view table styles
+.ag-row-group-expanded {
+    background-color: $--pds-tkn-color-purple-100 !important;
+}
+
+.ag-row-level-2 {
+    background-color: $--pds-tkn-color-purple-50 !important;
+}
+
+.p-button.p-button-icon-only {
+    background-color: $--pds-tkn-color-purple-400 !important;
+    border-color: $--pds-tkn-color-purple-400 !important;
+}
+
+.p-datepicker {
+    border: 0px !important;
+    width: max-content !important;
+
+    .p-highlight {
+        background-color: $--pds-tkn-color-purple-300 !important;
+        color: $--pds-tkn-color-white !important;
+        border: 1px solid $--pds-tkn-color-purple-300 !important;
+    }
+}
+
+.p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: $--pds-tkn-color-purple-300 !important;
+    background: $--pds-tkn-color-purple-300 !important;
+}
+
+.p-datepicker table td {
+    padding: 0.2rem !important;
+}
+
+.p-datepicker table td>span {
+    width: 1.7rem !important;
+    height: 1.7rem !important;
+}
+
+.p-datepicker table {
+    font-size: 10pt !important;
+    margin: -0.143rem 0;
+}
+
+.p-datepicker .p-datepicker-header {
+    padding: 0.2rem !important;
+}
+
+// angular library styles

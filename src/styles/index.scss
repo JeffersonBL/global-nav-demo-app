@@ -1,0 +1,44 @@
+@import "../styles/breakpoints";
+@import "../styles/color";
+@import "../styles/shape";
+@import "../styles/size";
+@import "../styles/space";
+@import "../styles/typography";
+
+.btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 16px;
+  gap: 8px;
+  color: $--pds-tkn-color-purple-400;
+  margin-left: $--pds-tkn-font-size-100;
+  /* pds-tkn/element-text/sans/400/medium */
+  font-size: 16px;
+  font-weight: $--pds-tkn-font-weight-500;
+  line-height: $--pds-tkn-size-5x;
+}
+
+.stroked-btn {
+  border-radius: 4px;
+  border: 2px solid $--pds-tkn-color-purple-400;
+  background: var(--neutral-neutral-0, #fff);
+}
+
+.filled-btn {
+  border-radius: 4px;
+  border: 1px solid var(--pds-tkn-color-purple-600, #48179c);
+  background: var(--pds-tkn-color-purple-400, #6d41d3);
+  color: #fff;
+}
+
+.heading-typography {
+  color: $--pds-tkn-color-black;
+  line-height: $--pds-tkn-size-5x;
+  .sub-type {
+    color: var(--pds-tkn-color-neutral-800, #252525);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+  }
+}
