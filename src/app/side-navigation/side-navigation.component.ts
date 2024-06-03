@@ -14,11 +14,15 @@ export class SideNavigationComponent {
   searchListItems: any = [];
   isOpen: any;
 
+
   async ngOnInit() {
     this.items = [];
     this.getList();
   }
 
+  /**
+   * Get navigation list
+   */
   getList = () => {
     setTimeout(() => {
       this.items = [
@@ -232,12 +236,20 @@ export class SideNavigationComponent {
     }, 1000);
   };
 
+  /**
+   * searched navigation lsit
+   * @param searchVal 
+   */
   onEnterSearchInput(searchVal: any) {
     console.log(searchVal);
 
     // call list api and set items in same format
   }
 
+  /**
+   * onclick application from the list
+   * @param val 
+   */
   onClickNavigationItem = (val: any) => {
     console.log(val);
   };

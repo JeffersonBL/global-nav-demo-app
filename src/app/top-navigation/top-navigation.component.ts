@@ -24,7 +24,9 @@ export class TopNavigationComponent {
   tableItems: any[] = [];
   selectedItems: any[] = [];
   dropdownName: any[] = [];
+
   ngOnInit() {
+    // user List
     this.userListItems = [
       {
         name: 'Jefferson E',
@@ -35,21 +37,22 @@ export class TopNavigationComponent {
         buildNumber: 'V01.1.1',
       },
     ];
-
+    // tenant  List
     this.tenants = [{ name: 'DEV-01' }, { name: 'DEV-02' }];
+    // role list
     this.roles = [{ name: 'Blackline Admin' }, { name: 'Tax Reviewer' }];
-
+    // default tenant & role selection
     this.defaultSelections = {
       tenant: this.tenants[0]['name'],
       role: this.roles[0]['name'],
     };
-
+    // breadcrumb list
     this.breadcrumbItems = [
       { label: 'Master Data Management', route: '' },
       { label: 'Legal Entity', route: '' },
     ];
 
-
+    // product List for dropdown
     this.productItems = [
       {
         "name": "ICCS",
@@ -57,6 +60,7 @@ export class TopNavigationComponent {
       }
     ];
 
+    // table list for dropdown
     this.tableItems = [
       {
         "name": "Legal Entity",
@@ -145,7 +149,7 @@ export class TopNavigationComponent {
     ];
 
 
-
+    // selected dropdowns
     this.selectedItems = [
       {
         "product": {
@@ -159,6 +163,7 @@ export class TopNavigationComponent {
       }
     ];
 
+    // dropdown names
     this.dropdownName = [
       {
         "selectOne": "Products",
@@ -173,24 +178,40 @@ export class TopNavigationComponent {
   };
 
 
+  /**
+   * on tenant change
+   * @param selectedTenant 
+   */
   onChangeTenant = (selectedTenant: any) => {
     console.log(selectedTenant);
 
   };
 
+  /**
+   * on role change
+   * @param selectedRole 
+   */
   onChangeRole = (selectedRole: any) => {
     console.log(selectedRole);
   };
 
+  // on click breadcrumb
   onClickBreadcrumbItem = (selected: any) => {
     console.log(selected);
-
   }
 
+  /**
+   * on select product from dropdown
+   * @param selected 
+   */
   onSelectProduct = (selected: any) => {
 
   }
 
+  /**
+   * on select table from dropdown
+   * @param selected 
+   */
   onSelectTable = (selected: any) => {
 
   }
